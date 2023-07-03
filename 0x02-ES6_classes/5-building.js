@@ -13,13 +13,13 @@ export default class Building{
         if (typeof value === 'number') {
             this._sqft = value;
         } else {
-            throw new Error('TypeError: Square footage must be a number');
+            throw new TypeError('TypeError: Square footage must be a number');
         }
     }
 
     // Abstract method
     evacuationWarningMessage() {
-        throw new Error(
+        throw new TypeError(
             'Class extending Building must override evacuationWarningMessage'
         );
     }
